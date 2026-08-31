@@ -1,4 +1,5 @@
-# desenvolvimento-de-algoritmo-e-pensamento-computacional
+<h1 align="center">desenvolvimento-de-algoritmo-e-pensamento-computacional</h1>
+
 Repositório com os exercícios, listas e projetos desenvolvidos na disciplina Desenvolvimento de Algoritmo e Pensamento Computacional , do curso de Engenharia de Software do Centro Universitário do Distrito Federal (UDF) , referente ao 2º semestre .
 
 <h1 align="center">Sobre a disciplina</h1>
