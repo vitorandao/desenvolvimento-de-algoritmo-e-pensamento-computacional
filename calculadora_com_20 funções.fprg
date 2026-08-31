@@ -1,0 +1,478 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Calculadora20Funcoes"/>
+        <attribute name="authors" value="Vitor"/>
+        <attribute name="about" value="Calculadora com 20 funcoes - Prototipagem de Sistemas Computacionais"/>
+        <attribute name="saved" value="2026-08-31 07:22:26 "/>
+        <attribute name="created" value="Vml0b3I7UEM7MjAyNi0wOC0zMTsxMDowMDowMCBBTTsx"/>
+        <attribute name="edited" value="Vml0b3I7UEM7MjAyNi0wOC0zMTsxMDowMDowMCBBTTsy"/>
+        <attribute name="edited" value="dml0b3I7R1JBRklURTsyMDI2LTA4LTMxOyIwNzoyMjoyNiAiOzE7MjM4Mg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;                Calculadora com 20 fun&#231;&#245;es                &quot;" newline="True"/>
+            <output expression="&quot;==========================================================&quot;" newline="True"/>
+            <output expression="&quot; 1 - IMC&quot;" newline="True"/>
+            <output expression="&quot; 2 - Area de figuras geometricas&quot;" newline="True"/>
+            <output expression="&quot; 3 - Soma&quot;" newline="True"/>
+            <output expression="&quot; 4 - Subtracao&quot;" newline="True"/>
+            <output expression="&quot; 5 - Multiplicacao&quot;" newline="True"/>
+            <output expression="&quot; 6 - Divisao&quot;" newline="True"/>
+            <output expression="&quot; 7 - Media aritmetica&quot;" newline="True"/>
+            <output expression="&quot; 8 - Porcentagem&quot;" newline="True"/>
+            <output expression="&quot; 9 - Regra de tres simples&quot;" newline="True"/>
+            <output expression="&quot;10 - Conversao Celsius -&gt; Fahrenheit&quot;" newline="True"/>
+            <output expression="&quot;11 - Conversao Km -&gt; Milhas&quot;" newline="True"/>
+            <output expression="&quot;12 - Perimetro&quot;" newline="True"/>
+            <output expression="&quot;13 - Volume do cubo&quot;" newline="True"/>
+            <output expression="&quot;14 - Juros simples&quot;" newline="True"/>
+            <output expression="&quot;15 - Desconto&quot;" newline="True"/>
+            <output expression="&quot;16 - Velocidade media&quot;" newline="True"/>
+            <output expression="&quot;17 - Consumo (km/l)&quot;" newline="True"/>
+            <output expression="&quot;18 - Par ou impar&quot;" newline="True"/>
+            <output expression="&quot;19 - Calculo de idade&quot;" newline="True"/>
+            <output expression="&quot;20 - Potencia&quot;" newline="True"/>
+            <output expression="&quot;==========================================================&quot;" newline="True"/>
+            <declare name="opcao" type="Integer" array="False" size=""/>
+            <output expression="&quot;Digite o numero da opcao desejada:&quot;" newline="False"/>
+            <input variable="opcao"/>
+            <if expression="opcao==1">
+                <then>
+                    <comment text="Calculo do IMC"/>
+                    <declare name="v1p" type="Real" array="False" size=""/>
+                    <declare name="v1a" type="Real" array="False" size=""/>
+                    <declare name="v1r" type="Real" array="False" size=""/>
+                    <output expression="&quot;Digite o peso (kg): &quot;" newline="False"/>
+                    <input variable="v1p"/>
+                    <output expression="&quot;Digite a altura (m): &quot;" newline="False"/>
+                    <input variable="v1a"/>
+                    <assign variable="v1r" expression="v1p/(v1a*v1a)"/>
+                    <output expression="&quot;IMC calculado: &quot;" newline="False"/>
+                    <output expression="v1r" newline="True"/>
+                    <if expression="v1r&lt;18.5">
+                        <then>
+                            <output expression="&quot;Classificacao: Abaixo do peso&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="v1r&lt;25">
+                                <then>
+                                    <output expression="&quot;Classificacao: Peso normal&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="v1r&lt;30">
+                                        <then>
+                                            <output expression="&quot;Classificacao: Sobrepeso&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Classificacao: Obesidade&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="opcao==2">
+                        <then>
+                            <comment text="Calculo de area de figuras geometricas"/>
+                            <declare name="v2op" type="Integer" array="False" size=""/>
+                            <output expression="&quot;--- Area de Figuras ---&quot;" newline="True"/>
+                            <output expression="&quot;1 - Quadrado&quot;" newline="True"/>
+                            <output expression="&quot;2 - Retangulo&quot;" newline="True"/>
+                            <output expression="&quot;3 - Circulo&quot;" newline="True"/>
+                            <output expression="&quot;4 - Triangulo&quot;" newline="True"/>
+                            <output expression="&quot;Escolha a figura: &quot;" newline="False"/>
+                            <input variable="v2op"/>
+                            <if expression="v2op==1">
+                                <then>
+                                    <declare name="v2l" type="Real" array="False" size=""/>
+                                    <output expression="&quot;Digite o lado do quadrado: &quot;" newline="False"/>
+                                    <input variable="v2l"/>
+                                    <output expression="&quot;Area do quadrado: &quot;" newline="False"/>
+                                    <output expression="v2l*v2l" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="v2op==2">
+                                        <then>
+                                            <declare name="v2b" type="Real" array="False" size=""/>
+                                            <declare name="v2h" type="Real" array="False" size=""/>
+                                            <output expression="&quot;Digite a base do retangulo: &quot;" newline="False"/>
+                                            <input variable="v2b"/>
+                                            <output expression="&quot;Digite a altura do retangulo: &quot;" newline="False"/>
+                                            <input variable="v2h"/>
+                                            <output expression="&quot;Area do retangulo: &quot;" newline="False"/>
+                                            <output expression="v2b*v2h" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="v2op==3">
+                                                <then>
+                                                    <declare name="v2r" type="Real" array="False" size=""/>
+                                                    <output expression="&quot;Digite o raio do circulo: &quot;" newline="False"/>
+                                                    <input variable="v2r"/>
+                                                    <output expression="&quot;Area do circulo: &quot;" newline="False"/>
+                                                    <output expression="3.14159*v2r*v2r" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="v2op==4">
+                                                        <then>
+                                                            <declare name="v2b2" type="Real" array="False" size=""/>
+                                                            <declare name="v2h2" type="Real" array="False" size=""/>
+                                                            <output expression="&quot;Digite a base do triangulo: &quot;" newline="False"/>
+                                                            <input variable="v2b2"/>
+                                                            <output expression="&quot;Digite a altura do triangulo: &quot;" newline="False"/>
+                                                            <input variable="v2h2"/>
+                                                            <output expression="&quot;Area do triangulo: &quot;" newline="False"/>
+                                                            <output expression="(v2b2*v2h2)/2" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;Opcao de figura invalida!&quot;" newline="True"/>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="opcao==3">
+                                <then>
+                                    <comment text="Soma"/>
+                                    <declare name="v3a" type="Real" array="False" size=""/>
+                                    <declare name="v3b" type="Real" array="False" size=""/>
+                                    <output expression="&quot;Digite o primeiro valor: &quot;" newline="False"/>
+                                    <input variable="v3a"/>
+                                    <output expression="&quot;Digite o segundo valor: &quot;" newline="False"/>
+                                    <input variable="v3b"/>
+                                    <output expression="&quot;Resultado da soma: &quot;" newline="False"/>
+                                    <output expression="v3a+v3b" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="opcao==4">
+                                        <then>
+                                            <comment text="Subtracao"/>
+                                            <declare name="v4a" type="Real" array="False" size=""/>
+                                            <declare name="v4b" type="Real" array="False" size=""/>
+                                            <output expression="&quot;Digite o primeiro valor: &quot;" newline="False"/>
+                                            <input variable="v4a"/>
+                                            <output expression="&quot;Digite o segundo valor: &quot;" newline="False"/>
+                                            <input variable="v4b"/>
+                                            <output expression="&quot;Resultado da subtracao: &quot;" newline="False"/>
+                                            <output expression="v4a-v4b" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="opcao==5">
+                                                <then>
+                                                    <comment text="Multiplicacao"/>
+                                                    <declare name="v5a" type="Real" array="False" size=""/>
+                                                    <declare name="v5b" type="Real" array="False" size=""/>
+                                                    <output expression="&quot;Digite o primeiro valor: &quot;" newline="False"/>
+                                                    <input variable="v5a"/>
+                                                    <output expression="&quot;Digite o segundo valor: &quot;" newline="False"/>
+                                                    <input variable="v5b"/>
+                                                    <output expression="&quot;Resultado da multiplicacao: &quot;" newline="False"/>
+                                                    <output expression="v5a*v5b" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <if expression="opcao==6">
+                                                        <then>
+                                                            <comment text="Divisao"/>
+                                                            <declare name="v6a" type="Real" array="False" size=""/>
+                                                            <declare name="v6b" type="Real" array="False" size=""/>
+                                                            <output expression="&quot;Digite o numerador: &quot;" newline="False"/>
+                                                            <input variable="v6a"/>
+                                                            <output expression="&quot;Digite o denominador: &quot;" newline="False"/>
+                                                            <input variable="v6b"/>
+                                                            <if expression="v6b==0">
+                                                                <then>
+                                                                    <output expression="&quot;Erro: divisao por zero!&quot;" newline="True"/>
+                                                                </then>
+                                                                <else>
+                                                                    <output expression="&quot;Resultado da divisao: &quot;" newline="False"/>
+                                                                    <output expression="v6a/v6b" newline="True"/>
+                                                                </else>
+                                                            </if>
+                                                        </then>
+                                                        <else>
+                                                            <if expression="opcao==7">
+                                                                <then>
+                                                                    <comment text="Media aritmetica de 3 valores"/>
+                                                                    <declare name="v7a" type="Real" array="False" size=""/>
+                                                                    <declare name="v7b" type="Real" array="False" size=""/>
+                                                                    <declare name="v7c" type="Real" array="False" size=""/>
+                                                                    <output expression="&quot;Digite o 1o valor: &quot;" newline="False"/>
+                                                                    <input variable="v7a"/>
+                                                                    <output expression="&quot;Digite o 2o valor: &quot;" newline="False"/>
+                                                                    <input variable="v7b"/>
+                                                                    <output expression="&quot;Digite o 3o valor: &quot;" newline="False"/>
+                                                                    <input variable="v7c"/>
+                                                                    <output expression="&quot;Media aritmetica: &quot;" newline="False"/>
+                                                                    <output expression="(v7a+v7b+v7c)/3" newline="True"/>
+                                                                </then>
+                                                                <else>
+                                                                    <if expression="opcao==8">
+                                                                        <then>
+                                                                            <comment text="Calculo de porcentagem"/>
+                                                                            <declare name="v8v" type="Real" array="False" size=""/>
+                                                                            <declare name="v8p" type="Real" array="False" size=""/>
+                                                                            <output expression="&quot;Digite o valor: &quot;" newline="False"/>
+                                                                            <input variable="v8v"/>
+                                                                            <output expression="&quot;Digite o percentual: &quot;" newline="False"/>
+                                                                            <input variable="v8p"/>
+                                                                            <output expression="&quot;Resultado: &quot;" newline="False"/>
+                                                                            <output expression="(v8v*v8p)/100" newline="True"/>
+                                                                        </then>
+                                                                        <else>
+                                                                            <if expression="opcao==9">
+                                                                                <then>
+                                                                                    <comment text="Regra de tres simples (a esta para b assim como c esta para x)"/>
+                                                                                    <declare name="v9a" type="Real" array="False" size=""/>
+                                                                                    <declare name="v9b" type="Real" array="False" size=""/>
+                                                                                    <declare name="v9c" type="Real" array="False" size=""/>
+                                                                                    <output expression="&quot;Digite o valor de A: &quot;" newline="False"/>
+                                                                                    <input variable="v9a"/>
+                                                                                    <output expression="&quot;Digite o valor de B: &quot;" newline="False"/>
+                                                                                    <input variable="v9b"/>
+                                                                                    <output expression="&quot;Digite o valor de C: &quot;" newline="False"/>
+                                                                                    <input variable="v9c"/>
+                                                                                    <if expression="v9a==0">
+                                                                                        <then>
+                                                                                            <output expression="&quot;Erro: A nao pode ser zero!&quot;" newline="True"/>
+                                                                                        </then>
+                                                                                        <else>
+                                                                                            <output expression="&quot;Valor de X: &quot;" newline="False"/>
+                                                                                            <output expression="(v9b*v9c)/v9a" newline="True"/>
+                                                                                        </else>
+                                                                                    </if>
+                                                                                </then>
+                                                                                <else>
+                                                                                    <if expression="opcao==10">
+                                                                                        <then>
+                                                                                            <comment text="Conversao de Celsius para Fahrenheit"/>
+                                                                                            <declare name="v10c" type="Real" array="False" size=""/>
+                                                                                            <output expression="&quot;Digite a temperatura em Celsius: &quot;" newline="False"/>
+                                                                                            <input variable="v10c"/>
+                                                                                            <output expression="&quot;Temperatura em Fahrenheit: &quot;" newline="False"/>
+                                                                                            <output expression="(v10c*9/5)+32" newline="True"/>
+                                                                                        </then>
+                                                                                        <else>
+                                                                                            <if expression="opcao==11">
+                                                                                                <then>
+                                                                                                    <comment text="Conversao de quilometros para milhas"/>
+                                                                                                    <declare name="v11k" type="Real" array="False" size=""/>
+                                                                                                    <output expression="&quot;Digite a distancia em Km: &quot;" newline="False"/>
+                                                                                                    <input variable="v11k"/>
+                                                                                                    <output expression="&quot;Distancia em milhas: &quot;" newline="False"/>
+                                                                                                    <output expression="v11k*0.621371" newline="True"/>
+                                                                                                </then>
+                                                                                                <else>
+                                                                                                    <if expression="opcao==12">
+                                                                                                        <then>
+                                                                                                            <comment text="Calculo de perimetro"/>
+                                                                                                            <declare name="v12op" type="Integer" array="False" size=""/>
+                                                                                                            <output expression="&quot;--- Perimetro ---&quot;" newline="True"/>
+                                                                                                            <output expression="&quot;1 - Retangulo&quot;" newline="True"/>
+                                                                                                            <output expression="&quot;2 - Circulo&quot;" newline="True"/>
+                                                                                                            <output expression="&quot;Escolha a figura: &quot;" newline="False"/>
+                                                                                                            <input variable="v12op"/>
+                                                                                                            <if expression="v12op==1">
+                                                                                                                <then>
+                                                                                                                    <declare name="v12b" type="Real" array="False" size=""/>
+                                                                                                                    <declare name="v12h" type="Real" array="False" size=""/>
+                                                                                                                    <output expression="&quot;Digite a base: &quot;" newline="False"/>
+                                                                                                                    <input variable="v12b"/>
+                                                                                                                    <output expression="&quot;Digite a altura: &quot;" newline="False"/>
+                                                                                                                    <input variable="v12h"/>
+                                                                                                                    <output expression="&quot;Perimetro do retangulo: &quot;" newline="False"/>
+                                                                                                                    <output expression="2*(v12b+v12h)" newline="True"/>
+                                                                                                                </then>
+                                                                                                                <else>
+                                                                                                                    <if expression="v12op==2">
+                                                                                                                        <then>
+                                                                                                                            <declare name="v12r" type="Real" array="False" size=""/>
+                                                                                                                            <output expression="&quot;Digite o raio: &quot;" newline="False"/>
+                                                                                                                            <input variable="v12r"/>
+                                                                                                                            <output expression="&quot;Perimetro do circulo: &quot;" newline="False"/>
+                                                                                                                            <output expression="2*3.14159*v12r" newline="True"/>
+                                                                                                                        </then>
+                                                                                                                        <else>
+                                                                                                                            <output expression="&quot;Opcao de figura invalida!&quot;" newline="True"/>
+                                                                                                                        </else>
+                                                                                                                    </if>
+                                                                                                                </else>
+                                                                                                            </if>
+                                                                                                        </then>
+                                                                                                        <else>
+                                                                                                            <if expression="opcao==13">
+                                                                                                                <then>
+                                                                                                                    <comment text="Volume do cubo"/>
+                                                                                                                    <declare name="v13l" type="Real" array="False" size=""/>
+                                                                                                                    <output expression="&quot;Digite o lado do cubo: &quot;" newline="False"/>
+                                                                                                                    <input variable="v13l"/>
+                                                                                                                    <output expression="&quot;Volume do cubo: &quot;" newline="False"/>
+                                                                                                                    <output expression="v13l*v13l*v13l" newline="True"/>
+                                                                                                                </then>
+                                                                                                                <else>
+                                                                                                                    <if expression="opcao==14">
+                                                                                                                        <then>
+                                                                                                                            <comment text="Juros simples"/>
+                                                                                                                            <declare name="v14c" type="Real" array="False" size=""/>
+                                                                                                                            <declare name="v14t" type="Real" array="False" size=""/>
+                                                                                                                            <declare name="v14tm" type="Real" array="False" size=""/>
+                                                                                                                            <output expression="&quot;Digite o capital: &quot;" newline="False"/>
+                                                                                                                            <input variable="v14c"/>
+                                                                                                                            <output expression="&quot;Digite a taxa (%): &quot;" newline="False"/>
+                                                                                                                            <input variable="v14t"/>
+                                                                                                                            <output expression="&quot;Digite o tempo: &quot;" newline="False"/>
+                                                                                                                            <input variable="v14tm"/>
+                                                                                                                            <output expression="&quot;Juros: &quot;" newline="False"/>
+                                                                                                                            <output expression="(v14c*v14t*v14tm)/100" newline="True"/>
+                                                                                                                        </then>
+                                                                                                                        <else>
+                                                                                                                            <if expression="opcao==15">
+                                                                                                                                <then>
+                                                                                                                                    <comment text="Calculo de desconto"/>
+                                                                                                                                    <declare name="v15v" type="Real" array="False" size=""/>
+                                                                                                                                    <declare name="v15p" type="Real" array="False" size=""/>
+                                                                                                                                    <declare name="v15d" type="Real" array="False" size=""/>
+                                                                                                                                    <output expression="&quot;Digite o valor original: &quot;" newline="False"/>
+                                                                                                                                    <input variable="v15v"/>
+                                                                                                                                    <output expression="&quot;Digite o percentual de desconto: &quot;" newline="False"/>
+                                                                                                                                    <input variable="v15p"/>
+                                                                                                                                    <assign variable="v15d" expression="(v15v*v15p)/100"/>
+                                                                                                                                    <output expression="&quot;Valor do desconto: &quot;" newline="False"/>
+                                                                                                                                    <output expression="v15d" newline="True"/>
+                                                                                                                                    <output expression="&quot;Valor final: &quot;" newline="False"/>
+                                                                                                                                    <output expression="v15v-v15d" newline="True"/>
+                                                                                                                                </then>
+                                                                                                                                <else>
+                                                                                                                                    <if expression="opcao==16">
+                                                                                                                                        <then>
+                                                                                                                                            <comment text="Velocidade media"/>
+                                                                                                                                            <declare name="v16d" type="Real" array="False" size=""/>
+                                                                                                                                            <declare name="v16t" type="Real" array="False" size=""/>
+                                                                                                                                            <output expression="&quot;Digite a distancia (km): &quot;" newline="False"/>
+                                                                                                                                            <input variable="v16d"/>
+                                                                                                                                            <output expression="&quot;Digite o tempo (h): &quot;" newline="False"/>
+                                                                                                                                            <input variable="v16t"/>
+                                                                                                                                            <if expression="v16t==0">
+                                                                                                                                                <then>
+                                                                                                                                                    <output expression="&quot;Erro: tempo nao pode ser zero!&quot;" newline="True"/>
+                                                                                                                                                </then>
+                                                                                                                                                <else>
+                                                                                                                                                    <output expression="&quot;Velocidade media: &quot;" newline="False"/>
+                                                                                                                                                    <output expression="v16d/v16t" newline="True"/>
+                                                                                                                                                </else>
+                                                                                                                                            </if>
+                                                                                                                                        </then>
+                                                                                                                                        <else>
+                                                                                                                                            <if expression="opcao==17">
+                                                                                                                                                <then>
+                                                                                                                                                    <comment text="Consumo de combustivel"/>
+                                                                                                                                                    <declare name="v17d" type="Real" array="False" size=""/>
+                                                                                                                                                    <declare name="v17c" type="Real" array="False" size=""/>
+                                                                                                                                                    <output expression="&quot;Digite a distancia percorrida (km): &quot;" newline="False"/>
+                                                                                                                                                    <input variable="v17d"/>
+                                                                                                                                                    <output expression="&quot;Digite o combustivel consumido (l): &quot;" newline="False"/>
+                                                                                                                                                    <input variable="v17c"/>
+                                                                                                                                                    <if expression="v17c==0">
+                                                                                                                                                        <then>
+                                                                                                                                                            <output expression="&quot;Erro: combustivel nao pode ser zero!&quot;" newline="True"/>
+                                                                                                                                                        </then>
+                                                                                                                                                        <else>
+                                                                                                                                                            <output expression="&quot;Consumo (km/l): &quot;" newline="False"/>
+                                                                                                                                                            <output expression="v17d/v17c" newline="True"/>
+                                                                                                                                                        </else>
+                                                                                                                                                    </if>
+                                                                                                                                                </then>
+                                                                                                                                                <else>
+                                                                                                                                                    <if expression="opcao==18">
+                                                                                                                                                        <then>
+                                                                                                                                                            <comment text="Identificacao de numero par ou impar"/>
+                                                                                                                                                            <declare name="v18n" type="Integer" array="False" size=""/>
+                                                                                                                                                            <output expression="&quot;Digite um numero inteiro: &quot;" newline="False"/>
+                                                                                                                                                            <input variable="v18n"/>
+                                                                                                                                                            <if expression="(v18n MOD 2)==0">
+                                                                                                                                                                <then>
+                                                                                                                                                                    <output expression="&quot;O numero e PAR&quot;" newline="True"/>
+                                                                                                                                                                </then>
+                                                                                                                                                                <else>
+                                                                                                                                                                    <output expression="&quot;O numero e IMPAR&quot;" newline="True"/>
+                                                                                                                                                                </else>
+                                                                                                                                                            </if>
+                                                                                                                                                        </then>
+                                                                                                                                                        <else>
+                                                                                                                                                            <if expression="opcao==19">
+                                                                                                                                                                <then>
+                                                                                                                                                                    <comment text="Calculo de idade"/>
+                                                                                                                                                                    <declare name="v19n" type="Integer" array="False" size=""/>
+                                                                                                                                                                    <declare name="v19a" type="Integer" array="False" size=""/>
+                                                                                                                                                                    <output expression="&quot;Digite o ano de nascimento: &quot;" newline="False"/>
+                                                                                                                                                                    <input variable="v19n"/>
+                                                                                                                                                                    <output expression="&quot;Digite o ano atual: &quot;" newline="False"/>
+                                                                                                                                                                    <input variable="v19a"/>
+                                                                                                                                                                    <output expression="&quot;Idade aproximada: &quot;" newline="False"/>
+                                                                                                                                                                    <output expression="v19a-v19n" newline="True"/>
+                                                                                                                                                                </then>
+                                                                                                                                                                <else>
+                                                                                                                                                                    <if expression="opcao==20">
+                                                                                                                                                                        <then>
+                                                                                                                                                                            <comment text="Calculo de potencia"/>
+                                                                                                                                                                            <declare name="v20b" type="Real" array="False" size=""/>
+                                                                                                                                                                            <declare name="v20e" type="Real" array="False" size=""/>
+                                                                                                                                                                            <output expression="&quot;Digite a base: &quot;" newline="False"/>
+                                                                                                                                                                            <input variable="v20b"/>
+                                                                                                                                                                            <output expression="&quot;Digite o expoente: &quot;" newline="False"/>
+                                                                                                                                                                            <input variable="v20e"/>
+                                                                                                                                                                            <output expression="&quot;Resultado: &quot;" newline="False"/>
+                                                                                                                                                                            <output expression="v20b^v20e" newline="True"/>
+                                                                                                                                                                        </then>
+                                                                                                                                                                        <else>
+                                                                                                                                                                            <output expression="&quot;Opcao invalida! Escolha um numero de 1 a 20.&quot;" newline="True"/>
+                                                                                                                                                                        </else>
+                                                                                                                                                                    </if>
+                                                                                                                                                                </else>
+                                                                                                                                                            </if>
+                                                                                                                                                        </else>
+                                                                                                                                                    </if>
+                                                                                                                                                </else>
+                                                                                                                                            </if>
+                                                                                                                                        </else>
+                                                                                                                                    </if>
+                                                                                                                                </else>
+                                                                                                                            </if>
+                                                                                                                        </else>
+                                                                                                                    </if>
+                                                                                                                </else>
+                                                                                                            </if>
+                                                                                                        </else>
+                                                                                                    </if>
+                                                                                                </else>
+                                                                                            </if>
+                                                                                        </else>
+                                                                                    </if>
+                                                                                </else>
+                                                                            </if>
+                                                                        </else>
+                                                                    </if>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
